@@ -1,0 +1,9 @@
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\bin\Debug\netstandard2.0\CoffeMachine.Shared.deps.json
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\bin\Debug\netstandard2.0\CoffeMachine.Shared.dll
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\bin\Debug\netstandard2.0\CoffeMachine.Shared.pdb
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\obj\Debug\netstandard2.0\CoffeMachine.Shared.csprojAssemblyReference.cache
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\obj\Debug\netstandard2.0\CoffeMachine.Shared.csproj.CoreCompileInputs.cache
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\obj\Debug\netstandard2.0\CoffeMachine.Shared.AssemblyInfoInputs.cache
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\obj\Debug\netstandard2.0\CoffeMachine.Shared.AssemblyInfo.cs
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\obj\Debug\netstandard2.0\CoffeMachine.Shared.dll
+C:\Sviluppo\Kata\CoffeMachine\CoffeMachine.Shared\obj\Debug\netstandard2.0\CoffeMachine.Shared.pdb
