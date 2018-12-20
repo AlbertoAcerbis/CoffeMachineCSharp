@@ -4,9 +4,9 @@ using CoffeMachine.Shared.JsonModel;
 
 namespace CoffeMachine
 {
-    public class CommandTranslator
+    internal class CommandTranslator
     {
-        public static string GetDrinkMakerComand(DrinkCommand userComand)
+        internal static CommandTranslationResult GetComand(DrinkCommand userComand)
         {
             var commandBuilder = new StringBuilder();
 
@@ -14,7 +14,11 @@ namespace CoffeMachine
 
             if (moneyDifference < 0)
             {
-                return $"M:Not enough money. Please insert {Math.Abs(moneyDifference)}";
+                return new CommandTranslationResult
+                {
+                    CommandResult = $"M:Not enough money. Please insert {Math.Abs(moneyDifference)}",
+                    IsValid = false
+                };
             }
 
             commandBuilder.AppendFormat("{0}", userComand.DrinkType.Code);
@@ -32,7 +36,11 @@ namespace CoffeMachine
                 commandBuilder.Append("::");
             }
 
-            return commandBuilder.ToString();
+            return new CommandTranslationResult
+            {
+                CommandResult = commandBuilder.ToString(),
+                IsValid = true
+            };
         }
 
         private static double CheckEnoughMoney(double price, double money)

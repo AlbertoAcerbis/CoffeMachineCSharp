@@ -35,7 +35,10 @@ namespace CoffeMachine.Test
                 Money = new Money(money),
                 IsCold =  new IsCold(isCold),
             };
-            var drinkMakerCommand = CommandTranslator.GetDrinkMakerComand(userCommand);
+
+            var coffeeMachine = new CoffeeMachine();
+
+            var drinkMakerCommand = coffeeMachine.GetDrinkMakerComand(userCommand);
 
             Assert.Equal(expected, drinkMakerCommand);
         }
@@ -45,5 +48,39 @@ namespace CoffeMachine.Test
         {
 
         }
+
+
+        [Fact]
+        public void DoesReportMatch()
+        {
+            var coffeMachine = new CoffeeMachine();
+
+            var test1 = GenerateTestCommand("Coffee", 1, 1.0, false);
+
+            coffeMachine.GetDrinkMakerComand(test1);
+
+            var expected = "Coffee: 1; Cassa: 0.6";
+
+            Assert.Equal(expected, coffeMachine.GetReport());
+            
+        }
+
+
+        private DrinkCommand GenerateTestCommand(string drinkType, int sugarQuantity, double money, bool isCold)
+        {
+            var drinkTypeEnum = DrinkType.FromName(drinkType);
+
+            var userCommand = new DrinkCommand
+            {
+                DrinkType = drinkTypeEnum,
+                Sugar = new Sugar(sugarQuantity),
+                Money = new Money(money),
+                IsCold = new IsCold(isCold),
+            };
+
+            return userCommand;
+        }
+
+
     }
 }

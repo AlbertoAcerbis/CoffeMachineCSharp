@@ -14,7 +14,8 @@ namespace CoffeMachine.Shared.Enums
 
         public static IEnumerable<DrinkType> List() => new[] { Thea, HotChocolate, Coffee, Orange };
 
-        public DrinkType(int id, string code, string name, double price, bool canBeCold = false) : base(id, code, name, price, canBeCold)
+        public DrinkType(int id, string code, string name, double price, bool canBeCold = false) :
+            base(id, code, name, price, canBeCold)
         {
         }
 
